@@ -1,16 +1,17 @@
-# This is a sample Python script.
+import sys
+from PySide6.QtWidgets import QApplication, QLabel
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+def main():
+    # Step 1: Create the application
+    app = QApplication(sys.argv)
 
+    # Step 2: Create a widget (here just a label)
+    label = QLabel("Hello, PySide!")
+    label.resize(1900, 1000)
+    label.show()
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+    # Step 3: Run the event loop
+    sys.exit(app.exec())
 
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+if __name__ == "__main__":
+    main()
